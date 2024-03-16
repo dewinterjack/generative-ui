@@ -3,6 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/generative-ui-umd.cjs",
+  "module": "dist/generative-ui.js",
+  "exports": {
+    ".": {
+      "import": "./dist/generative-ui.js",
+      "require": "./dist/generative-ui-umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -40,6 +51,7 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.6",
+    "vite-plugin-dts": "^3.7.3",
     "vite-tsconfig-paths": "^4.3.2"
   },
   "resolutions": {
